@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 6px;
+    user-select: none
+}
+
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#like-hand{
+    animation: like-hand-animation 2s alternate infinite ;
+    transform-origin: top;
+    transform-box: fill-box;
+}
+
+@keyframes like-hand-animation{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(20deg);
+    }
+}
+
+#dislike-hand{
+    animation: dislike-hand-animation 2s 0.1s alternate infinite ;
+    transform-origin: top;
+    transform-box: fill-box;
+}
+
+@keyframes dislike-hand-animation{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(-20deg);
+    }
+}
+
+#head-nod{
+    animation: head 2s alternate infinite;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes head {
+    from{
+        transform: rotateZ(-10deg);
+    }
+    to{
+        transform: rotateZ(10deg);
+    }
+}
+
+.thumb:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+    transform-box: fill-box;
+    cursor: pointer;
+
+}
+
+#like{
+    animation: like-animation 2s alternate infinite ;
+    transform-origin: top right;
+    transform-box: fill-box;
+}
+
+@keyframes like-animation {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(20deg);
+    }
+}
+
+#dislike{
+    animation: dislike-animation 2s 0.1s alternate infinite ;
+    transform-origin: top left;
+    transform-box: fill-box;
+}
+
+@keyframes dislike-animation {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(-20deg);
+    }
+}
+
+#dislike-count{
+    text-align: center;
+    width: 100%;
+}
+
+.text{
+    text-align: center;
+    pointer-events: none;
+    color: #2F2E41;
+
+}
+
+.text input{
+    border: none;
+    outline: none;
+    text-align: center;
+    pointer-events: none;
+}
